@@ -1,0 +1,12 @@
+- hosts: webserver
+  tasks:
+  - name: Creating a file in /tmp
+    file:
+      name: file1
+      path: /tmp/file1
+      state: touch  
+
+  - name: copy content in to the file
+    copy:
+      content: "this is a file created via playbook"
+      dest: /tmp/file1     
