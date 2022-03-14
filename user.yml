@@ -1,0 +1,11 @@
+---
+- name: create the user
+  hosts: all
+  become: true
+  tasks:
+  - name: create a user
+    ansible.builtin.user:
+           name: soumya
+           password: Soumya@12
+           state: present
+
